@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} 导航中心 {% endblock %}
+
+{% block body %}
+
+    <li class="list-group-item" style="width: 800px">
+
+
+                <a class="wrap-img" href="#" target="_blank">
+                    <img src="{{ navigation.url }}" width="50px">
+                </a>
+                <span class="glyphicon glyphicon-left" aria-hidden="true"></span>
+                <a href="#" target="_blank">{{ navigation.title }}</a>
+                <br>
+                <a href="{{ url_for('detail',question_id=navigation.id) }}">{{ foo.title }}</a>
+
+                <br>
+                <span class="badge">发布时间:{{ navigation.creat_time }}</span>
+                <p style="">{{ foo.detail }}
+                </p>
+
+            </li>
+{% endblock %}

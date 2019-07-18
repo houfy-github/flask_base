@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+{#        引入jquery的在官网上压缩后的文件，所有继承base.html的页面或者所有js文件都可以直接使用jquery#}
+        <link rel="stylesheet" href="https://code.jquery.com/jquery-3.1.1.min.js">
+        {% block extCSS %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+    {% block header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block extJS %}
+    {% endblock %}
+
+</body>
+</html>
